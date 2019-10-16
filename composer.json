@@ -6,7 +6,7 @@
     "prefer-stable": true,
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.2.*",
+        "php": "^7.2",
         "illuminate/support": "6.2.*",
         "illuminate/container": "6.2.*",
         "illuminate/database": "6.2.*",
