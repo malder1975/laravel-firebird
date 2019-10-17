@@ -114,14 +114,16 @@ class Firebird25Grammar extends Grammar
 
         $table = $this->wrapTable($query->from);
 
-        $columns = $this->compileUpdateColumns($values);
+
+        $columns = $this->compileUpdateColumns($query, $values);
 
         $where = $this->compileUpdateWheres($query);
+
 
         return trim("UPDATE ($table} SET {$columns} $where");
     }
 
-    protected function compileUpdateColumns($values)
+    protected function compileUpdateColumns(Builder $query, $values)
     {
         $columns = [];
 
