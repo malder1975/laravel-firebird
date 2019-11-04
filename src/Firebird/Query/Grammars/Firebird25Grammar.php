@@ -134,7 +134,7 @@ class Firebird25Grammar extends Grammar
         return implode(', ', $columns);
     }
 
-    protected function compileUpdatesWheres(Builder $query)
+    protected function compileUpdateWheres(Builder $query)
     {
         $baseWhere = $this->compileWheres($query);
 
